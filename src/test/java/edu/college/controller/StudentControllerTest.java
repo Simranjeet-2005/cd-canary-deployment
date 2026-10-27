@@ -27,7 +27,7 @@ class StudentControllerTest {
     void testVersionEndpoint() throws Exception {
         mockMvc.perform(get("/api/version"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.version").value("v1"))
-                .andExpect(jsonPath("$.status").value("stable"));
+                .andExpect(jsonPath("$.version").value("v2"))
+                .andExpect(jsonPath("$.status").value("canary"));
     }
 }
